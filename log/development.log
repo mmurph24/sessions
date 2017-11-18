@@ -43,3 +43,115 @@ Processing by ClientsController#index as HTML
 Completed 200 OK in 332ms (Views: 330.4ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClients (20171118223643)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "clients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "phone" varchar, "injuries" varchar, "notes" varchar, "image" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171118223643"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSessions (20171118223654)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" varchar, "location" varchar, "price" varchar, "notes" varchar, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_sessions_on_client_id" ON "sessions" ("client_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171118223654"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-18 22:41:02.650636"], ["updated_at", "2017-11-18 22:41:02.650636"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sessions_on_client_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sessions_on_client_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach01.jpg"], ["created_at", "2017-11-18 22:45:18.595974"], ["updated_at", "2017-11-18 22:45:18.595974"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 22:55:44.425325"], ["updated_at", "2017-11-18 22:55:44.425325"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 22:57:14.915087"], ["updated_at", "2017-11-18 22:57:14.915087"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:00:54.027400"], ["updated_at", "2017-11-18 23:00:54.027400"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:02:43.694399"], ["updated_at", "2017-11-18 23:02:43.694399"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:02:48.338470"], ["updated_at", "2017-11-18 23:02:48.338470"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:02:51.322186"], ["updated_at", "2017-11-18 23:02:51.322186"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:03:34.681414"], ["updated_at", "2017-11-18 23:03:34.681414"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:09:11.000284"], ["updated_at", "2017-11-18 23:09:11.000284"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:09:13.447888"], ["updated_at", "2017-11-18 23:09:13.447888"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:11:16.329373"], ["updated_at", "2017-11-18 23:11:16.329373"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:11:18.670908"], ["updated_at", "2017-11-18 23:11:18.670908"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:11:20.923726"], ["updated_at", "2017-11-18 23:11:20.923726"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:11:23.155042"], ["updated_at", "2017-11-18 23:11:23.155042"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:11:25.365068"], ["updated_at", "2017-11-18 23:11:25.365068"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:11:27.666615"], ["updated_at", "2017-11-18 23:11:27.666615"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:11:29.873582"], ["updated_at", "2017-11-18 23:11:29.873582"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:11:32.160860"], ["updated_at", "2017-11-18 23:11:32.160860"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:11:33.983736"], ["updated_at", "2017-11-18 23:11:33.983736"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:36:10.971726"], ["updated_at", "2017-11-18 23:36:10.971726"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-18 23:36:41.046898"], ["updated_at", "2017-11-18 23:36:41.046898"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
