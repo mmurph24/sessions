@@ -9,11 +9,11 @@ class ClientsController < ApplicationController
   end
 
   def new
-    @message = Client.new
+    @client = Client.new
   end
 
   def create
-  @client = Client.new(client_params)
+    @client = Client.new(client_params)
   if @client.save
     redirect_to '/'
   else
@@ -24,13 +24,7 @@ end
 
   private
   def client_params
-    params.require(:first_name).permit(:content)
-    params.require(:last_name).permit(:content)
-    params.require(:email).permit(:content)
-    params.require(:phone).permit(:content)
-    params.require(:injuries).permit(:content)
-    params.require(:notes).permit(:content)
-    params.require(:image).permit(:content)
+    params.require(:client).permit(:first_name, :last_name, :email, :phone, :injuries, :notes, :image)
   end
 
 end

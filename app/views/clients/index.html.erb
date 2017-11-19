@@ -1,5 +1,7 @@
 <div class="header">
-  This is the header
+  <div class="button">
+    <%= link_to 'New Client', "/clients/new" %>
+  </div>
 </div>
 
 <div class="body">
@@ -11,7 +13,6 @@
           <span class="name"><%= t.first_name %> <%= t.last_name %> <%= t.id %><br></span><br>
           <%= link_to "Learn more", client_path(t) %>
         </div>
-        <%= link_to 'New Client', "clients/new" %>
       <% end %>
     </div>
   </div>

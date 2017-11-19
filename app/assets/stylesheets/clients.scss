@@ -3,6 +3,9 @@
   width: 100%;
   background-color: black;
   color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .body {
@@ -33,7 +36,22 @@
   display: flex;
 }
 
-.card {
+.card, .bio {
   border: 1px dotted black;
   width: 350px;
+}
+
+.button {
+  margin: 45px;
+  padding: 15px 20px;
+  border: 1px solid white;
+  background-color: white;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+img {
+  height: 200px;
 }

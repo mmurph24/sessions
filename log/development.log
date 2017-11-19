@@ -207,3 +207,86 @@ Migrating to CreateSessions (20171118223654)
   [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 30], ["created_at", "2017-11-19 03:13:59.711708"], ["updated_at", "2017-11-19 03:13:59.711708"]]
   [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-19 22:38:30.729171"], ["updated_at", "2017-11-19 22:38:30.729171"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 10, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Client was grumpy and we got off to a rough start."], ["client_id", 33], ["created_at", "2017-11-19 22:38:30.749196"], ["updated_at", "2017-11-19 22:38:30.749196"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 17, 2017"], ["location", "Elevate"], ["price", "$150"], ["notes", "Better this time! He seems more interested in upper back and shoulder work."], ["client_id", 33], ["created_at", "2017-11-19 22:38:30.752967"], ["updated_at", "2017-11-19 22:38:30.752967"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 33], ["created_at", "2017-11-19 22:38:30.756368"], ["updated_at", "2017-11-19 22:38:30.756368"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."first_name" = ? LIMIT ?[0m  [["first_name", "Ellyn"], ["LIMIT", 11]]
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "clients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adroable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-19 22:39:06.523558"], ["updated_at", "2017-11-19 22:39:06.523558"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 10, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Client was grumpy and we got off to a rough start."], ["client_id", 34], ["created_at", "2017-11-19 22:39:06.543885"], ["updated_at", "2017-11-19 22:39:06.543885"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 17, 2017"], ["location", "Elevate"], ["price", "$150"], ["notes", "Better this time! He seems more interested in upper back and shoulder work."], ["client_id", 34], ["created_at", "2017-11-19 22:39:06.547324"], ["updated_at", "2017-11-19 22:39:06.547324"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 34], ["created_at", "2017-11-19 22:39:06.550643"], ["updated_at", "2017-11-19 22:39:06.550643"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "clients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adorable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-19 22:46:49.073467"], ["updated_at", "2017-11-19 22:46:49.073467"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 10, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Client was grumpy and we got off to a rough start."], ["client_id", 37], ["created_at", "2017-11-19 22:46:49.099629"], ["updated_at", "2017-11-19 22:46:49.099629"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 17, 2017"], ["location", "Elevate"], ["price", "$150"], ["notes", "Better this time! He seems more interested in upper back and shoulder work."], ["client_id", 37], ["created_at", "2017-11-19 22:46:49.103580"], ["updated_at", "2017-11-19 22:46:49.103580"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 37], ["created_at", "2017-11-19 22:46:49.106607"], ["updated_at", "2017-11-19 22:46:49.106607"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35mSQL (26.1ms)[0m  [1m[31mDELETE FROM "clients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adorable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-19 22:48:42.962133"], ["updated_at", "2017-11-19 22:48:42.962133"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 10, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Client was grumpy and we got off to a rough start."], ["client_id", 38], ["created_at", "2017-11-19 22:48:42.985757"], ["updated_at", "2017-11-19 22:48:42.985757"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 17, 2017"], ["location", "Elevate"], ["price", "$150"], ["notes", "Better this time! He seems more interested in upper back and shoulder work."], ["client_id", 38], ["created_at", "2017-11-19 22:48:42.989798"], ["updated_at", "2017-11-19 22:48:42.989798"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 38], ["created_at", "2017-11-19 22:48:42.993761"], ["updated_at", "2017-11-19 22:48:42.993761"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ellyn"], ["last_name", "Sjoquist"], ["email", "emsjoquist@gmail.com"], ["phone", "618-974-1487"], ["injuries", "None right now"], ["notes", ":thumbs_up:"], ["image", "https://www.uakron.edu/viewbook/2011/images/es_3.jpg"], ["created_at", "2017-11-19 22:48:42.996552"], ["updated_at", "2017-11-19 22:48:42.996552"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 10, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Client was grumpy and we got off to a rough start."], ["client_id", 39], ["created_at", "2017-11-19 22:48:43.000628"], ["updated_at", "2017-11-19 22:48:43.000628"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 17, 2017"], ["location", "Elevate"], ["price", "$150"], ["notes", "Better this time! He seems more interested in upper back and shoulder work."], ["client_id", 39], ["created_at", "2017-11-19 22:48:43.004388"], ["updated_at", "2017-11-19 22:48:43.004388"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 39], ["created_at", "2017-11-19 22:48:43.008315"], ["updated_at", "2017-11-19 22:48:43.008315"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
