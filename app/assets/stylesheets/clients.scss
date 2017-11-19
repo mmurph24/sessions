@@ -1,3 +1,57 @@
-// Place all the styles related to the Clients controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.header {
+  height: 200px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.body {
+  height: 400px;
+  width: 100%;
+  background-color: red;
+}
+
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color: purple;
+}
+
+.container {
+  width: 1200px;
+  background-color: pink;
+  margin: 0 auto;
+
+}
+
+.client {
+  padding-left: 25px;
+
+}
+
+.row {
+  display: flex;
+}
+
+.card, .bio {
+  border: 1px dotted black;
+  width: 350px;
+}
+
+.button {
+  margin: 45px;
+  padding: 15px 20px;
+  border: 1px solid white;
+  background-color: white;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+img {
+  height: 200px;
+}
