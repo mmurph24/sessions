@@ -9,7 +9,7 @@
 }
 
 .body {
-  height: 400px;
+  height: 1600px;
   width: 100%;
   background-color: red;
 }
@@ -23,17 +23,19 @@
 .container {
   width: 1200px;
   background-color: pink;
-  margin: 0 auto;
+  margin: auto;
 
 }
 
 .client {
   padding-left: 25px;
-
+  float: left;
+  display: inline;
+  width: 200px;
 }
 
-.row {
-  display: flex;
+.client-info {
+  text-align: center;
 }
 
 .card, .bio {
