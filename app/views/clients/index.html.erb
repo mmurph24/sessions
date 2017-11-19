@@ -4,12 +4,14 @@
 
 <div class="body">
   <div class="container">
-    <div class="clients">
+    <div class="row">
       <% @clients.each do |t| %>
         <div class="client">
-          <img class="photo" src="<%= t.image %>">
-          <span class="name"><%= t.first_name %> <%= t.last_name %><br></span>
+          <img class="photo" src="<%= t.image %>"><br>
+          <span class="name"><%= t.first_name %> <%= t.last_name %> <%= t.id %><br></span><br>
+          <%= link_to "Learn more", client_path(t) %>
         </div>
+        <%= link_to 'New Client', "clients/new" %>
       <% end %>
     </div>
   </div>

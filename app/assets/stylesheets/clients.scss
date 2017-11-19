@@ -18,10 +18,22 @@
 }
 
 .container {
-  width: 1000px;
+  width: 1200px;
+  background-color: pink;
+  margin: 0 auto;
+
 }
 
 .client {
   padding-left: 25px;
-  text-align: center;
+
+}
+
+.row {
+  display: flex;
+}
+
+.card {
+  border: 1px dotted black;
+  width: 350px;
 }

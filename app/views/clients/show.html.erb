@@ -1,0 +1,14 @@
+<div>
+  <h1><%= @client.first_name %> <%= @client.last_name %> <%= @client.id %></h1>
+
+  <div class="session-row">
+    <% @sessions.each do |d| %>
+      <div class="card">
+        Date: <%= d.date %><br>
+        Location: <%= d.location %><br>
+        Price: <%= d.price %><br>
+        Notes: <%= d.notes %><br>
+      </div><br><br>
+    <% end %>
+  </div>
+</div>
