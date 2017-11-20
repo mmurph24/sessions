@@ -12,7 +12,7 @@ Session.create(date: "October 10, 2017", location: "Kinected", price: "$150", no
 Session.create(date: "October 17, 2017", location: "Elevate", price: "$150", notes: "Better this time! He seems more interested in upper back and shoulder work.", client_id: c1.id)
 Session.create(date: "November 5, 2017", location: "Kinected", price: "$150", notes: "Focused more on body work.", client_id: c1.id)
 
-c2 = Client.create(first_name: "Ellyn", last_name: "Sjoquist", email: "emsjoquist@gmail.com", phone: "618-974-1487", injuries: "None right now", notes: ":thumbs_up:", image: "https://www.uakron.edu/viewbook/2011/images/es_3.jpg")
+c2 = Client.create(first_name: "Ellyn", last_name: "Sjoquist", email: "emsjoquist@gmail.com", phone: "618-974-1487", injuries: "None right now", notes: ":thumbs_up:", image: "https://pbs.twimg.com/profile_images/378800000144939860/dc04de16f969c2bb756e46c008250538_400x400.jpeg")
 Session.create(date: "October 10, 2017", location: "Kinected", price: "$150", notes: "Client was grumpy and we got off to a rough start.", client_id: c2.id)
 Session.create(date: "October 17, 2017", location: "Elevate", price: "$150", notes: "Better this time! He seems more interested in upper back and shoulder work.", client_id: c2.id)
 Session.create(date: "November 5, 2017", location: "Kinected", price: "$150", notes: "Focused more on body work.", client_id: c2.id)

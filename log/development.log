@@ -631,3 +631,236 @@ Migrating to CreateSessions (20171118223654)
   [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 64], ["created_at", "2017-11-19 23:35:17.792681"], ["updated_at", "2017-11-19 23:35:17.792681"]]
   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/40" for 127.0.0.1 at 2017-11-19 21:38:52 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 40]]
+  Rendered clients/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 314ms (Views: 282.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-19 21:38:56 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-11-19 21:38:57 -0500
+Processing by ClientsController#show as 
+  Parameters: {"id"=>"favicon"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Client with 'id'=favicon):
+  
+app/controllers/clients_controller.rb:7:in `show'
+Started GET "/" for 127.0.0.1 at 2017-11-19 21:41:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 213ms (Views: 199.8ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adorable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-20 02:41:17.947095"], ["updated_at", "2017-11-20 02:41:17.947095"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 10, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Client was grumpy and we got off to a rough start."], ["client_id", 65], ["created_at", "2017-11-20 02:41:17.967457"], ["updated_at", "2017-11-20 02:41:17.967457"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 17, 2017"], ["location", "Elevate"], ["price", "$150"], ["notes", "Better this time! He seems more interested in upper back and shoulder work."], ["client_id", 65], ["created_at", "2017-11-20 02:41:17.971119"], ["updated_at", "2017-11-20 02:41:17.971119"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 65], ["created_at", "2017-11-20 02:41:17.974444"], ["updated_at", "2017-11-20 02:41:17.974444"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ellyn"], ["last_name", "Sjoquist"], ["email", "emsjoquist@gmail.com"], ["phone", "618-974-1487"], ["injuries", "None right now"], ["notes", ":thumbs_up:"], ["image", "https://www.uakron.edu/viewbook/2011/images/es_3.jpg"], ["created_at", "2017-11-20 02:41:17.976745"], ["updated_at", "2017-11-20 02:41:17.976745"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 10, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Client was grumpy and we got off to a rough start."], ["client_id", 66], ["created_at", "2017-11-20 02:41:17.981273"], ["updated_at", "2017-11-20 02:41:17.981273"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 17, 2017"], ["location", "Elevate"], ["price", "$150"], ["notes", "Better this time! He seems more interested in upper back and shoulder work."], ["client_id", 66], ["created_at", "2017-11-20 02:41:17.985924"], ["updated_at", "2017-11-20 02:41:17.985924"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 66], ["created_at", "2017-11-20 02:41:17.990366"], ["updated_at", "2017-11-20 02:41:17.990366"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-11-19 21:41:19 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Michael"], ["last_name", "Murphy"], ["email", "michael.murphy314@gmail.com"], ["phone", "618-334-6314"], ["injuries", "Tight IT band"], ["notes", "Adorable"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"], ["created_at", "2017-11-20 02:42:16.878329"], ["updated_at", "2017-11-20 02:42:16.878329"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 10, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Client was grumpy and we got off to a rough start."], ["client_id", 67], ["created_at", "2017-11-20 02:42:16.901566"], ["updated_at", "2017-11-20 02:42:16.901566"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 17, 2017"], ["location", "Elevate"], ["price", "$150"], ["notes", "Better this time! He seems more interested in upper back and shoulder work."], ["client_id", 67], ["created_at", "2017-11-20 02:42:16.905629"], ["updated_at", "2017-11-20 02:42:16.905629"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 67], ["created_at", "2017-11-20 02:42:16.908858"], ["updated_at", "2017-11-20 02:42:16.908858"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ellyn"], ["last_name", "Sjoquist"], ["email", "emsjoquist@gmail.com"], ["phone", "618-974-1487"], ["injuries", "None right now"], ["notes", ":thumbs_up:"], ["image", "https://pbs.twimg.com/profile_images/378800000144939860/dc04de16f969c2bb756e46c008250538_400x400.jpeg"], ["created_at", "2017-11-20 02:42:16.911008"], ["updated_at", "2017-11-20 02:42:16.911008"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 10, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Client was grumpy and we got off to a rough start."], ["client_id", 68], ["created_at", "2017-11-20 02:42:16.914797"], ["updated_at", "2017-11-20 02:42:16.914797"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "October 17, 2017"], ["location", "Elevate"], ["price", "$150"], ["notes", "Better this time! He seems more interested in upper back and shoulder work."], ["client_id", 68], ["created_at", "2017-11-20 02:42:16.918322"], ["updated_at", "2017-11-20 02:42:16.918322"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "sessions" ("date", "location", "price", "notes", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date", "November 5, 2017"], ["location", "Kinected"], ["price", "$150"], ["notes", "Focused more on body work."], ["client_id", 68], ["created_at", "2017-11-20 02:42:16.921802"], ["updated_at", "2017-11-20 02:42:16.921802"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-11-19 21:42:19 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2017-11-19 21:42:28 -0500
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 50ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2017-11-19 21:45:05 -0500
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n1F69B5QoZhdFrwwcNbk2LhHDGrHx0aOnZAtdJa7GYgpDyWSJwHG9BDv8+TAJl3LGzs6YO7cp8eKFJucMA7KuA==", "client"=>{"first_name"=>"Erin", "last_name"=>"Hill", "email"=>"erinbuck88@gmail.com", "phone"=>"6149898767", "injuries"=>"ADF rib situation... and she stole lindsay's face apparently", "notes"=>"I love her", "image"=>"https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAi1AAAAJGU1NjQyMmI3LWUzMjAtNDBiMy04M2JiLWQ2M2VhNWUzZTQzOQ.jpg"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Erin"], ["last_name", "Hill"], ["email", "erinbuck88@gmail.com"], ["phone", "6149898767"], ["injuries", "ADF rib situation... and she stole lindsay's face apparently"], ["notes", "I love her"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAi1AAAAJGU1NjQyMmI3LWUzMjAtNDBiMy04M2JiLWQ2M2VhNWUzZTQzOQ.jpg"], ["created_at", "2017-11-20 02:45:05.004019"], ["updated_at", "2017-11-20 02:45:05.004019"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-19 21:45:05 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2017-11-19 21:45:16 -0500
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 44ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2017-11-19 21:46:10 -0500
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n0P8p5XVGABEcMUx5bof7ib9CcMWzlylPMmQ7nHV51spHaPBrIR/bAmJiuVVSqb9hYE/yT/VvewrTSYG12A0aw==", "client"=>{"first_name"=>"Kristin", "last_name"=>"Sjoquist", "email"=>"something", "phone"=>"", "injuries"=>"sits too much", "notes"=>"sister", "image"=>"https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAh7AAAAJGFkNTYyYTBhLWZjNGUtNDk0Zi05M2NiLTNlNmY3OTA4ZTQ1OA.jpg"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Kristin"], ["last_name", "Sjoquist"], ["email", "something"], ["phone", ""], ["injuries", "sits too much"], ["notes", "sister"], ["image", "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAh7AAAAJGFkNTYyYTBhLWZjNGUtNDk0Zi05M2NiLTNlNmY3OTA4ZTQ1OA.jpg"], ["created_at", "2017-11-20 02:46:10.620468"], ["updated_at", "2017-11-20 02:46:10.620468"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-19 21:46:10 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/69" for 127.0.0.1 at 2017-11-19 21:46:21 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mClient Load (2.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 69]]
+  Rendered clients/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 53ms (Views: 27.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/68" for 127.0.0.1 at 2017-11-19 21:46:31 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 68]]
+  Rendered clients/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 47ms (Views: 39.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/67" for 127.0.0.1 at 2017-11-19 21:46:39 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 67]]
+  Rendered clients/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 43ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/69" for 127.0.0.1 at 2017-11-19 21:46:45 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 69]]
+  Rendered clients/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 72ms (Views: 65.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-19 21:46:47 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.5ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 56ms (Views: 51.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/68" for 127.0.0.1 at 2017-11-19 21:47:02 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 68]]
+  Rendered clients/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-19 21:48:51 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
