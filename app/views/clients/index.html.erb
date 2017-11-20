@@ -6,16 +6,16 @@
 
 <div class="body">
   <div class="container">
-    <div class="row">
       <% @clients.each do |t| %>
         <div class="client">
-          <img class="photo" src="<%= t.image %>"><br>
-          <span class="name"><%= t.first_name %> <%= t.last_name %> <%= t.id %><br></span><br>
-          <%= link_to "Learn more", client_path(t) %>
+          <div class="client-info">
+            <img class="photo" src="<%= t.image %>"><br>
+            <span class="name"><%= t.first_name %> <%= t.last_name %> <%= t.id %><br></span><br>
+            <%= link_to "Learn more", client_path(t) %>
+          </div>
         </div>
       <% end %>
     </div>
-  </div>
 </div>
 
 <div class="footer">
