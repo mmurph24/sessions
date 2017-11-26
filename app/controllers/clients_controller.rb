@@ -8,18 +8,31 @@ class ClientsController < ApplicationController
     @sessions = @client.sessions
   end
 
+  def edit
+    @client = Client.find(params[:id])
+  end
+
+  def update
+    @client = Client.find(params[:id])
+    if @client.update_attributes(client_params)
+      redirect_to(:action => 'show', :id => @client.id)
+    else
+      render 'edit'
+    end
+  end
+
   def new
     @client = Client.new
   end
 
   def create
     @client = Client.new(client_params)
-  if @client.save
-    redirect_to '/'
-  else
-    render 'new'
+    if @client.save
+      redirect_to '/'
+    else
+      render 'new'
+    end
   end
-end
 
 
   private

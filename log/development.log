@@ -864,3 +864,987 @@ Processing by ClientsController#index as HTML
 Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/29" for 127.0.0.1 at 2017-11-20 22:36:05 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+Completed 404 Not Found in 16ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Client with 'id'=29):
+  
+app/controllers/clients_controller.rb:7:in `show'
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-11-20 22:36:07 -0500
+Processing by ClientsController#show as 
+  Parameters: {"id"=>"favicon"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Client with 'id'=favicon):
+  
+app/controllers/clients_controller.rb:7:in `show'
+Started GET "/" for 127.0.0.1 at 2017-11-20 22:36:08 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 278ms (Views: 275.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/69" for 127.0.0.1 at 2017-11-20 22:36:12 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mClient Load (1.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 69]]
+  Rendered clients/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 52ms (Views: 23.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-20 22:36:14 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 43ms (Views: 38.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2017-11-20 22:36:15 -0500
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 51ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/clients" for 127.0.0.1 at 2017-11-20 22:37:31 -0500
+Processing by ClientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lu8W1IGySZn5Oz8+19T8xNYlVClzD97wnAsnHGTbkIUXtI80Tpk3MGN6AbF/mHjFhI39/eK0h8DJguYskyUCLQ==", "client"=>{"first_name"=>"Time", "last_name"=>"Frey", "email"=>"tfrey7@gmail.com", "phone"=>"7810029389", "injuries"=>"", "notes"=>"Doesn't like pilates", "image"=>"https://media-exp2.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/015/217/3561d51.jpg"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "clients" ("first_name", "last_name", "email", "phone", "injuries", "notes", "image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Time"], ["last_name", "Frey"], ["email", "tfrey7@gmail.com"], ["phone", "7810029389"], ["injuries", ""], ["notes", "Doesn't like pilates"], ["image", "https://media-exp2.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/015/217/3561d51.jpg"], ["created_at", "2017-11-21 03:37:31.509121"], ["updated_at", "2017-11-21 03:37:31.509121"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-20 22:37:31 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/68" for 127.0.0.1 at 2017-11-20 22:39:48 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 68]]
+  Rendered clients/show.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 43ms (Views: 35.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/689" for 127.0.0.1 at 2017-11-20 22:39:52 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"689"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 689], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Client with 'id'=689):
+  
+app/controllers/clients_controller.rb:7:in `show'
+Started GET "/users/new" for 127.0.0.1 at 2017-11-20 22:41:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-11-26 14:19:25 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 262ms (Views: 242.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-11-26 14:19:27 -0500
+Processing by ClientsController#show as 
+  Parameters: {"id"=>"favicon"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Client with 'id'=favicon):
+  
+app/controllers/clients_controller.rb:7:in `show'
+Started GET "/71" for 127.0.0.1 at 2017-11-26 14:19:32 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 71]]
+  Rendered clients/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 68ms (Views: 33.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-26 14:27:48 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:27:52 -0500
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Session with 'id'=new):
+  
+app/controllers/sessions_controller.rb:3:in `show'
+Started GET "/clients/new" for 127.0.0.1 at 2017-11-26 14:29:09 -0500
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/new.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-26 14:30:41 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/67" for 127.0.0.1 at 2017-11-26 14:30:43 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mClient Load (1.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 67]]
+  Rendered clients/show.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 54ms (Views: 44.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/clients/new" for 127.0.0.1 at 2017-11-26 14:30:48 -0500
+Processing by ClientsController#new as HTML
+  Rendering clients/new.html.erb within layouts/application
+  Rendered clients/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:30:50 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-26 14:31:20 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5vhxlNaYrc36veGx6oo/lTWOxs4UxnEflkbo7gbSm3F0GDiuDycsU8ogyBGFT7rse5yVHKxG9Cc1YthsGnQTJg==", "session"=>{"date"=>"January 11, 2017", "location"=>"Elevate", "price"=>"$150", "notes"=>"This was a new one!", "client"=>"67"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Client(#70285514707620) expected, got "67" which is an instance of String(#70285462503160)):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2017-11-26 14:32:37 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/67" for 127.0.0.1 at 2017-11-26 14:32:39 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mClient Load (0.6ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 67]]
+  Rendered clients/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 94], ["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2017-11-26 14:34:01 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:34:02 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `integer' for #<Session:0x00007fd939c43c58>):
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :client %><br>
+    20:     <%= f.text_area :integer %>
+    21:   </div>
+    22:   <div class="actions">
+    23:     <%= f.submit "Create" %>
+  
+app/views/sessions/new.html.erb:20:in `block in _app_views_sessions_new_html_erb__2400722785500173837_70285476893660'
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb__2400722785500173837_70285476893660'
+Started GET "/" for 127.0.0.1 at 2017-11-26 14:34:06 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:36:07 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-26 14:36:11 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uC/d/vwJRQjNYYJuTyeGtssCZCYQPdiivCegOI1VB2wqz5TEJbbElv38q84g4gPPhRA39Ki9XZofA5C6kfOPOw==", "session"=>{"date"=>"", "location"=>"", "price"=>"", "notes"=>"", "client"=>"55"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Client(#70285514707620) expected, got "55" which is an instance of String(#70285462503160)):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started POST "/sessions" for 127.0.0.1 at 2017-11-26 14:40:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uC/d/vwJRQjNYYJuTyeGtssCZCYQPdiivCegOI1VB2wqz5TEJbbElv38q84g4gPPhRA39Ki9XZofA5C6kfOPOw==", "session"=>{"date"=>"", "location"=>"", "price"=>"", "notes"=>"", "client"=>"55"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Client(#70285514707620) expected, got "55" which is an instance of String(#70285462503160)):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2017-11-26 14:40:14 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:40:16 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:40:47 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-26 14:40:55 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0PcoT4m2GOCZBh3Aw94kuqcTcyB6Wu3F/MgkoIjOPeUzGrf7xJ+CWGNc7uJTp7jG2xGx698HcgvFuVK7aM4CoQ==", "session"=>{"date"=>"2017-11-22", "location"=>"", "price"=>"", "notes"=>"", "client"=>""}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Client(#70285514707620) expected, got "" which is an instance of String(#70285462503160)):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:41:55 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:42:12 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/Murphmonster/Desktop/apps/sessions/app/views/sessions/new.html.erb:20: syntax error, unexpected ':', expecting ')'
+f.search_field(:user, :name) :client );@output_buffer.safe_a
+                              ^):
+  
+app/views/sessions/new.html.erb:20: syntax error, unexpected ':', expecting ')'
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:42:28 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-26 14:42:33 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ru8uPunIIC5MDjUMLY1LjxqunRFKafJEPy2T7Yuj7Q1NArGKpOG6lrZUxi699NfzZqxf2u80bYoGXOX2a6PSSQ==", "session"=>{"date"=>"", "location"=>"", "price"=>"", "notes"=>"", "client"=>"michael"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Client(#70285514707620) expected, got "michael" which is an instance of String(#70285462503160)):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:43:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :client %><br>
+    20:     <%= f.text_area.to_i :client %>
+    21:   </div>
+    22:   <div class="actions">
+    23:     <%= f.submit "Create" %>
+  
+app/views/sessions/new.html.erb:20:in `block in _app_views_sessions_new_html_erb__2400722785500173837_70285523460180'
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb__2400722785500173837_70285523460180'
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:44:07 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-26 14:46:02 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-26 14:46:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sT+3A8LKeQ8m4MygBJCiIR/UR1KUPVX6b6KhBe6oBIZS0ii3j+Pjt9y6P4KU6T5dY9aFmTFgyjRW09ceDqg7wg==", "session"=>{"date"=>"2017-11-25", "location"=>"Elevate", "price"=>"150", "notes"=>"None"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/" for 127.0.0.1 at 2017-11-26 14:46:22 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"sessions"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Client with 'id'=sessions):
+  
+app/controllers/clients_controller.rb:7:in `show'
+Started GET "/" for 127.0.0.1 at 2017-11-26 14:46:29 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-26 14:56:45 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/68" for 127.0.0.1 at 2017-11-26 14:56:47 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ? LIMIT ?[0m  [["client_id", 68], ["LIMIT", 11]]
+  [1m[36mCACHE Session Load (0.0ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ? LIMIT ?[0m  [["client_id", 68], ["LIMIT", 11]]
+  [1m[36mCACHE Session Load (0.0ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ? LIMIT ?[0m  [["client_id", 68], ["LIMIT", 11]]
+  [1m[36mCACHE Session Load (0.0ms)[0m  [1m[34mSELECT  "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ? LIMIT ?[0m  [["client_id", 68], ["LIMIT", 11]]
+  Rendered clients/show.html.erb within layouts/application (140.9ms)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_destination_path' for #<#<Class:0x00007fd93f3172c8>:0x00007fd93e60be30>
+Did you mean?  edit_client_path):
+    1: <div class="back">
+    2:   <a href="/">Back</a><br>
+    3:   <%= link_to "Edit", edit_destination_path(@destination) %>
+    4: </div>
+    5: 
+    6: <div>
+  
+app/views/clients/show.html.erb:3:in `_app_views_clients_show_html_erb__3313132701241011560_70285475783760'
+Started GET "/68" for 127.0.0.1 at 2017-11-26 14:57:32 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 68]]
+  Rendered clients/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clients/68/edit" for 127.0.0.1 at 2017-11-26 14:57:35 -0500
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/edit.html.erb within layouts/application
+  Rendered clients/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/68" for 127.0.0.1 at 2017-11-26 14:58:28 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 68]]
+  Rendered clients/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/68" for 127.0.0.1 at 2017-11-26 14:58:52 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 68]]
+  Rendered clients/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/68" for 127.0.0.1 at 2017-11-26 14:59:16 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 68]]
+  Rendered clients/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clients/68/edit" for 127.0.0.1 at 2017-11-26 14:59:19 -0500
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/edit.html.erb within layouts/application
+  Rendered clients/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 38ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-26 14:59:23 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 42ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/71" for 127.0.0.1 at 2017-11-26 14:59:25 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (1.9ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 71]]
+  Rendered clients/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 31.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/clients/71/edit" for 127.0.0.1 at 2017-11-26 14:59:27 -0500
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/edit.html.erb within layouts/application
+  Rendered clients/edit.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/71" for 127.0.0.1 at 2017-11-26 14:59:34 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/71"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/71" for 127.0.0.1 at 2017-11-26 15:00:13 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 71]]
+  Rendered clients/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/71" for 127.0.0.1 at 2017-11-26 15:00:21 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/71"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-11-26 15:00:26 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/71" for 127.0.0.1 at 2017-11-26 15:00:28 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 71]]
+  Rendered clients/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clients/71/edit" for 127.0.0.1 at 2017-11-26 15:00:35 -0500
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/edit.html.erb within layouts/application
+  Rendered clients/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/71" for 127.0.0.1 at 2017-11-26 15:01:53 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/71"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-11-26 15:03:14 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 32ms (Views: 27.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/71" for 127.0.0.1 at 2017-11-26 15:03:25 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 71]]
+  Rendered clients/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 39ms (Views: 25.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/clients/71/edit" for 127.0.0.1 at 2017-11-26 15:03:26 -0500
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/edit.html.erb within layouts/application
+  Rendered clients/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/71" for 127.0.0.1 at 2017-11-26 15:03:28 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/71"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-11-26 15:04:10 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Murphmonster/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Murphmonster/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 9ms (Views: 4.7ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2017-11-26 15:04:14 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/clients/67" for 127.0.0.1 at 2017-11-26 15:04:16 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 67]]
+  Rendered clients/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 46ms (Views: 36.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/clients/67/edit" for 127.0.0.1 at 2017-11-26 15:04:17 -0500
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  Rendering clients/edit.html.erb within layouts/application
+  Rendered clients/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 41ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/clients/67" for 127.0.0.1 at 2017-11-26 15:04:20 -0500
+Processing by ClientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KjKhlsom1m32ejsXL0qZsnALIg1G3SQ0yMx0Csus9XOO+r30BL6ZV/488PhCE8/NkJUkxZvSlqoqFeoTx4oqVg==", "client"=>{"first_name"=>"Michael", "last_name"=>"Murphy", "email"=>"michael.murphy314@gmail.com", "phone"=>"618-334-6314", "injuries"=>"Tight IT bands", "notes"=>"Adorable", "image"=>"https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAkKAAAAJDE0Y2M1ZDJiLWUzN2EtNDk4YS1iNzkxLWU2NjI5ZjQ4NDgzOA.jpg"}, "commit"=>"Create", "id"=>"67"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "clients" SET "injuries" = ?, "updated_at" = ? WHERE "clients"."id" = ?[0m  [["injuries", "Tight IT bands"], ["updated_at", "2017-11-26 20:04:20.828769"], ["id", 67]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/clients/67
+Completed 302 Found in 13ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/clients/67" for 127.0.0.1 at 2017-11-26 15:04:20 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 67]]
+  Rendered clients/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clients/67" for 127.0.0.1 at 2017-11-26 15:04:28 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 67]]
+  Rendered clients/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 37ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/clients/" for 127.0.0.1 at 2017-11-26 15:04:31 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clients/71" for 127.0.0.1 at 2017-11-26 15:04:33 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 71]]
+  Rendered clients/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 34ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/clients/71/edit" for 127.0.0.1 at 2017-11-26 15:04:35 -0500
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/edit.html.erb within layouts/application
+  Rendered clients/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clients/" for 127.0.0.1 at 2017-11-26 15:06:05 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/clients/69" for 127.0.0.1 at 2017-11-26 15:06:08 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mClient Load (2.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 69]]
+  Rendered clients/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 39ms (Views: 27.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/clients/69/edit" for 127.0.0.1 at 2017-11-26 15:06:10 -0500
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering clients/edit.html.erb within layouts/application
+  Rendered clients/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/clients/69" for 127.0.0.1 at 2017-11-26 15:06:25 -0500
+Processing by ClientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m9vI70aKOYk+Hf71Vl48CN28CJIQtmI0AVOpSBXMxa3vNCQFUb3W0Hs0QK8dZWlthqhXTJGU8PfvGgiyfQYgbw==", "client"=>{"first_name"=>"Lindsay", "last_name"=>"Mulholland", "email"=>"LMH@gmail.com", "phone"=>"6149898767", "injuries"=>"ADF rib situation... and she stole lindsay's face apparently", "notes"=>"I love her", "image"=>"https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAi1AAAAJGU1NjQyMmI3LWUzMjAtNDBiMy04M2JiLWQ2M2VhNWUzZTQzOQ.jpg"}, "commit"=>"Create", "id"=>"69"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "clients" SET "first_name" = ?, "last_name" = ?, "email" = ?, "updated_at" = ? WHERE "clients"."id" = ?[0m  [["first_name", "Lindsay"], ["last_name", "Mulholland"], ["email", "LMH@gmail.com"], ["updated_at", "2017-11-26 20:06:25.806503"], ["id", 69]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/clients/69
+Completed 302 Found in 10ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/clients/69" for 127.0.0.1 at 2017-11-26 15:06:25 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 69]]
+  Rendered clients/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-26 15:06:28 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Murphmonster/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Murphmonster/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-26 15:06:28 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Murphmonster/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Murphmonster/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2017-11-26 15:06:32 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clients/71" for 127.0.0.1 at 2017-11-26 15:06:40 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 71]]
+  Rendered clients/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 35ms (Views: 29.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/clients/71/edit" for 127.0.0.1 at 2017-11-26 15:06:41 -0500
+Processing by ClientsController#edit as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/edit.html.erb within layouts/application
+  Rendered clients/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 34ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/clients/71" for 127.0.0.1 at 2017-11-26 15:06:46 -0500
+Processing by ClientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uApP99cDvyGNGsy4pjXAxupolVT+26nltLYOblRl6BnxXX8t48Aqu+/cuAP1sq7kp2jgS9X1UfLxK40GttoYfg==", "client"=>{"first_name"=>"Tim", "last_name"=>"Frey", "email"=>"tfrey@gmail.com", "phone"=>"7810029389", "injuries"=>"", "notes"=>"Doesn't like pilates", "image"=>"https://media-exp2.licdn.com/mpr/mpr/shrinknp_200_200/p/3/000/015/217/3561d51.jpg"}, "commit"=>"Create", "id"=>"71"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "clients" SET "first_name" = ?, "email" = ?, "updated_at" = ? WHERE "clients"."id" = ?[0m  [["first_name", "Tim"], ["email", "tfrey@gmail.com"], ["updated_at", "2017-11-26 20:06:46.919484"], ["id", 71]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/clients/71
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/clients/71" for 127.0.0.1 at 2017-11-26 15:06:46 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 71], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 71]]
+  Rendered clients/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-26 15:06:49 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Murphmonster/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Murphmonster/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-26 15:06:49 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Murphmonster/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Murphmonster/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2017-11-26 15:07:06 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/clients/68" for 127.0.0.1 at 2017-11-26 15:07:08 -0500
+Processing by ClientsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT  "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  Rendering clients/show.html.erb within layouts/application
+  [1m[36mSession Load (0.5ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."client_id" = ?[0m  [["client_id", 68]]
+  Rendered clients/show.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 44ms (Views: 37.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/clients" for 127.0.0.1 at 2017-11-26 15:07:09 -0500
+Processing by ClientsController#index as HTML
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  Rendered clients/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 55ms (Views: 49.9ms | ActiveRecord: 0.3ms)
+
+
