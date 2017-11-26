@@ -28,12 +28,11 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(client_params)
     if @client.save
-      redirect_to '/'
+      redirect_to '/clients'
     else
       render 'new'
     end
   end
-
 
   private
   def client_params

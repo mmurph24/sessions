@@ -15,6 +15,7 @@
   </div><br><br>
 
   <div class="session-row">
+    <%= link_to 'Log New Session', "/sessions/new" %><br><br>
     <% @sessions.each do |d| %>
       <div class="card">
         <%= link_to "Edit", edit_session_path(d) %><br><br>
