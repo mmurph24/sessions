@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get '/clients/:id/edit' => 'clients#edit', as: :edit_client
   patch '/clients/:id' => 'clients#update'
 
-  get '/sessions/display/:id' => 'sessions#show', as: :session
+  get '/sessions/:id' => 'sessions#show', as: :session
+  get '/sessions/:id/edit' => 'sessions#edit', as: :edit_session
+  patch '/sessions/:id' => 'sessions#update'
 end

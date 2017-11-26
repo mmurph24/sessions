@@ -17,6 +17,7 @@
   <div class="session-row">
     <% @sessions.each do |d| %>
       <div class="card">
+        <%= link_to "Edit", edit_session_path(d) %><br><br>
         Date: <%= d.date %><br>
         Location: <%= d.location %><br>
         Price: <%= d.price %><br>
