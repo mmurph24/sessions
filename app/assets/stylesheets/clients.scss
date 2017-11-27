@@ -22,6 +22,20 @@
 .button-container {
   display: flex;
   justify-content: space-around;
+  width: 500px;
+}
+
+.button {
+  padding: 15px 20px;
+  border: 1px solid white;
+  background-color: white;
+  width: 160px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: grey;
+  color: black;
 }
 
 .body {
@@ -50,13 +64,6 @@
 .card, .bio {
   border: 1px dotted black;
   width: 350px;
-}
-
-.button {
-  margin: 45px;
-  padding: 15px 20px;
-  border: 1px solid white;
-  background-color: white;
 }
 
 a:visited {
