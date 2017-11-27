@@ -1,11 +1,27 @@
+.mini-header {
+  width: 100% auto;
+  height: 35px;
+  background-color: black;
+}
+
 .header {
   height: 200px;
   width: 100%;
-  background-color: black;
+  background-color: #290037;
   color: white;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo img {
+  height: 150px;
+  width: 150px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .body {
@@ -14,17 +30,10 @@
   background-color: red;
 }
 
-.footer {
-  height: 200px;
-  width: 100%;
-  background-color: purple;
-}
-
-.container {
+.client-container {
   width: 1200px;
   background-color: pink;
   margin: auto;
-
 }
 
 .client {
@@ -51,9 +60,21 @@
 }
 
 a:visited {
+    color: #ABB7B7;
     text-decoration: none;
 }
 
-img {
+a {
+    color: #ABB7B7;
+    text-decoration: none;
+}
+
+.client-info img {
   height: 200px;
+}
+
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color: purple;
 }

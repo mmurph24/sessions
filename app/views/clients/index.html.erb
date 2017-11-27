@@ -1,22 +1,32 @@
+<div class="mini-header">
+  This is my mini header
+</div>
+
 <div class="header">
-  <div class="button">
-    <%= link_to 'New Client', "/clients/new" %>
+  <div class="logo">
+    <img src="http://icons.iconarchive.com/icons/iconarchive/red-orb-alphabet/256/Letter-Y-icon.png" alt="y-logo">
   </div>
-  <div class="button">
-    <%= link_to 'Log New Session', "/sessions/new" %>
+  <div class="button-container">
+    <div class="button">
+      <%= link_to 'New Client', "/clients/new" %>
+    </div>
+    <div class="button">
+      <%= link_to 'Log New Session', "/sessions/new" %>
+    </div>
   </div>
 </div>
 
 <div class="body">
-  <div class="container">
-      <% @clients.each do |t| %>
-        <div class="client">
-          <div class="client-info">
-            <img class="photo" src="<%= t.image %>"><br>
-            <span class="name"><%= t.first_name %> <%= t.last_name %> <%= t.id %><br></span><br>
-            <%= link_to "Learn more", client_path(t) %>
+  <div class="client-container">
+      <% @clients.order(:last_name).each do |t| %>
+        <%= link_to client_path(t) do %>
+          <div class="client">
+            <div class="client-info">
+              <img class="photo" src="<%= t.image %>"><br>
+              <span class="name"><%= t.first_name %> <%= t.last_name %></span><br><br>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
 </div>
